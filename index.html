@@ -399,33 +399,37 @@
                 <p class="text-muted">Dejanos un mensaje con lo que necesitas y te responderemos a la brevedad con una cotizacion transparente y viable.</p>
             </div>
             <div class="card shadow-sm border rounded-4 p-4">
-                <form onsubmit="event.preventDefault(); alert('Gracias por comunicarte. Responderemos tu solicitud en breve.');">
+                <form action="https://formspree.io/f/xdeaknze" method="POST">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label class="form-label small fw-semibold">Nombre o Negocio</label>
-                            <input type="text" class="form-control" placeholder="Tu nombre" required>
+                            <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" required>
                         </div>
                         <div class="col-md-6">
-                            <label class="form-label small fw-semibold">Correo Electronico o Telefono</label>
-                            <input type="text" class="form-control" placeholder="nombre@correo.com o WhatsApp" required>
+                            <label class="form-label small fw-semibold">Correo Electronico</label>
+                            <input type="email" name="_replyto" class="form-control" placeholder="nombre@correo.com" required>
                         </div>
-                        <div class="col-12">
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Telefono o WhatsApp (opcional)</label>
+                            <input type="tel" name="telefono" class="form-control" placeholder="871 123 4567">
+                        </div>
+                        <div class="col-md-6">
                             <label class="form-label small fw-semibold">Tipo de Solicitud</label>
-                            <select class="form-select">
-                                <option selected>Aplicacion Web</option>
-                                <option>Sistema de Escritorio / Ventas</option>
-                                <option>Soporte Tecnico a Domicilio</option>
-                                <option>Mantenimiento y Reparacion de Equipo</option>
-                                <option>Asesoria de Compra de Hardware</option>
-                                <option>Otro servicio tecnico a medida</option>
+                            <select name="tipo_servicio" class="form-select">
+                                <option value="Aplicacion Web" selected>Aplicacion Web</option>
+                                <option value="Sistema de Escritorio / Ventas">Sistema de Escritorio / Ventas</option>
+                                <option value="Soporte Tecnico a Domicilio">Soporte Tecnico a Domicilio</option>
+                                <option value="Mantenimiento y Reparacion de Equipo">Mantenimiento y Reparacion de Equipo</option>
+                                <option value="Asesoria de Compra de Hardware">Asesoria de Compra de Hardware</option>
+                                <option value="Otro servicio tecnico a medida">Otro servicio tecnico a medida</option>
                             </select>
                         </div>
                         <div class="col-12">
                             <label class="form-label small fw-semibold">Describe tu proyecto o inconveniente</label>
-                            <textarea class="form-control" rows="4" placeholder="¿Que necesitas que haga el sistema o que problema presenta tu equipo?" required></textarea>
+                            <textarea name="mensaje" class="form-control" rows="4" placeholder="Que necesitas que haga el sistema o que problema presenta tu equipo?" required></textarea>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn btn-brand rounded-pill w-100 py-2 fw-bold">Enviar Consulta</button>
+                            <button type="submit" class="btn btn-primary rounded-pill w-100 py-2 fw-bold">Enviar Consulta</button>
                         </div>
                     </div>
                 </form>
