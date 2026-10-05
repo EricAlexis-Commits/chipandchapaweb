@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chip&Chapa - Desarrollo de Software y Soporte Tecnico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --brand-blue: #2563eb;
+            --brand-blue-hover: #1d4ed8;
+            --brand-dark: #0f172a;
+        }
+
+        .bg-brand-dark {
+            background-color: var(--brand-dark);
+        }
+
+        .text-brand-blue {
+            color: var(--brand-blue);
+        }
+
+        .btn-brand {
+            background-color: var(--brand-blue);
+            color: #ffffff;
+            border: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+            .btn-brand:hover {
+                background-color: var(--brand-blue-hover);
+                color: #ffffff;
+                transform: translateY(-2px);
+            }
+
+        .card-service {
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .card-service:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+            }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(37, 99, 235, 0.12);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brand-dark sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="#inicio">
+                <img src="/Imagenes/Copia de Servicios Chip & Chapa C1.png" alt="Chip&Chapa Logo" width="36" height="36" class="d-inline-block align-text-top me-2 rounded">
+                Chip<span class="text-brand-blue">&</span>Chapa
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-medium">
+                    <li class="nav-item"><a class="nav-link px-3" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#filosofia">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#entregables">Entregables</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-brand rounded-pill px-4" href="#contacto">Cotizar Proyecto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="inicio" class="bg-brand-dark text-white py-5 position-relative border-bottom border-secondary border-opacity-25">
+        <div class="container py-lg-5">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <span class="badge bg-secondary bg-opacity-25 text-brand-blue px-3 py-2 rounded-pill mb-3 fw-semibold">
+                        Software a Medida & Soporte Tecnico
+                    </span>
+                    <h1 class="display-4 fw-bold lh-sm mb-3">
+                        Lleva tu negocio al mundo digital <span class="text-brand-blue">desde cero.</span>
+                    </h1>
+                    <p class="lead text-light text-opacity-75 mb-4">
+                        Construimos plataformas web seguras, sistemas de punto de venta y aplicaciones a la medida. Ademas, brindamos soporte tecnico a domicilio y mantenimiento garantizado.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#proyectos" class="btn btn-brand btn-lg px-4 rounded-pill fw-bold">Ver Trabajos</a>
+                        <a href="#contacto" class="btn btn-outline-light btn-lg px-4 rounded-pill">Escribenos</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <div class="p-2 bg-secondary bg-opacity-10 rounded-4 border border-secondary border-opacity-25 shadow-lg overflow-hidden">
+                        <img src="/Imagenes/Captura de pantalla 2026-10-05 023756.png" alt="Ilustracion Chip&Chapa" class="img-fluid rounded-3" style="max-height: 320px; width: 100%; object-fit: cover;" onerror="this.style.display='none'">
+                        <div class="p-4 text-light text-opacity-50 small">
+                            <i class="fs-1 d-block mb-2 text-brand-blue"></i>
+                            Soluciones limpias y eficientes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="servicios" class="py-5">
+        <div class="container py-lg-4">
+            <div class="text-center mb-5">
+                <h6 class="text-brand-blue text-uppercase fw-bold tracking-wider">Especialidades & Soluciones</h6>
+                <h2 class="display-6 fw-bold">Nuestros Servicios</h2>
+                <p class="text-muted">Desarrollo de software a la medida, mantenimiento preventivo y atencion tecnica directa con garantia en cada trabajo.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 card-service rounded-4 shadow-sm bg-white">
+                        <div class="card-body">
+                            <div class="icon-box mb-3">
+                                <i class="bi bi-browser-chrome text-brand-blue fs-3"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Desarrollo Web</h5>
+                            <p class="text-muted small mb-0">Plataformas interactivas, sistemas de autenticacion y paneles administrativos responsivos disenados a la medida de tu flujo de negocio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 card-service rounded-4 shadow-sm bg-white">
+                        <div class="card-body">
+                            <div class="icon-box mb-3">
+                                <i class="bi bi-window-desktop text-brand-blue fs-3"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Sistemas de Escritorio</h5>
+                            <p class="text-muted small mb-0">Sistemas de punto de venta (POS), control de existencias, reportes estadisticos y administracion comercial para negocios locales.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 card-service rounded-4 shadow-sm bg-white">
+                        <div class="card-body">
+                            <div class="icon-box mb-3">
+                                <i class="bi bi-database-check text-brand-blue fs-3"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Bases de Datos & Backend</h5>
+                            <p class="text-muted small mb-0">Arquitectura de servidores segura, modelado relacional de datos y validaciones estrictas para mantener la consistencia operativa.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 card-service rounded-4 shadow-sm bg-white">
+                        <div class="card-body">
+                            <div class="icon-box mb-3">
+                                <i class="bi bi-house-door-fill text-brand-blue fs-3"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Soporte a Domicilio</h5>
+                            <p class="text-muted small mb-0">Atencion tecnica directamente en tus instalaciones o domicilio sin que tengas que transportar tus equipos. Cobertura desde Filadelfia y Santa Teresa hacia cualquier punto solicitado.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 card-service rounded-4 shadow-sm bg-white">
+                        <div class="card-body">
+                            <div class="icon-box mb-3">
+                                <i class="bi bi-tools text-brand-blue fs-3"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Mantenimiento & Reparacion</h5>
+                            <p class="text-muted small mb-0">Optimizacion de equipos lentos, diagnostico de fallas fisicas o logicas, resolucion de licencias y mantenimiento preventivo para devolver el rendimiento optimo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 card-service rounded-4 shadow-sm bg-white">
+                        <div class="card-body">
+                            <div class="icon-box mb-3">
+                                <i class="bi bi-shield-check text-brand-blue fs-3"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Asesoria & Garantia</h5>
+                            <p class="text-muted small mb-0">Orientacion honesta y personalizada para que inviertas exclusivamente en los componentes o licencias que necesitas, respaldado con garantia en cada intervencion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="proyectos" class="py-5 bg-white border-top border-bottom">
+        <div class="container py-lg-4">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-8">
+                    <h2 class="display-6 fw-bold mb-0">Nuestros proyectos</h2>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <span class="text-muted small">*Imagenes y casos de referencia demostrativa.</span>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card rounded-4 border-0 shadow-sm overflow-hidden h-100">
+                        <a href="amazeme.html">
+                            <img src="/Imagenes/Portada.png" alt="Vista previa de AmazeMe" class="card-img-top object-fit-cover bg-secondary bg-opacity-10" style="height: 240px; border-bottom: 1px solid #e2e8f0;">
+                        </a>
+                        <div class="card-body p-4 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h4 class="fw-bold mb-0">AmazeMe</h4>
+                                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill">Pagina web</span>
+                                </div>
+                                <p class="text-muted small mb-3">
+                                    Plataforma web guiada que resuelve la indecision al regalar mediante cuestionarios analiticos y un sistema automatizado de lealtad con recompensas.
+                                </p>
+                                <ul class="list-unstyled small mb-4">
+                                    <li class="mb-1"><i class="bi bi-check2 text-brand-blue me-2"></i>Manejo seguro de sesiones y perfiles de usuario.</li>
+                                    <li class="mb-1"><i class="bi bi-check2 text-brand-blue me-2"></i>Calculo de recompensas e integracion de base de datos.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a href="amazeme.html" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Ver caso completo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card rounded-4 border-0 shadow-sm overflow-hidden h-100">
+                        <a href="miscelanea.html">
+                            <img src="/Imagenes/Miscleanea/Menu.png" alt="Vista previa de Miscelanea" class="card-img-top object-fit-cover bg-secondary bg-opacity-10" style="height: 240px; border-bottom: 1px solid #e2e8f0;">
+                        </a>
+                        <div class="card-body p-4 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <h4 class="fw-bold mb-0">Miscelanea</h4>
+                                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill">POS</span>
+                                </div>
+                                <p class="text-muted small mb-3">
+                                    Sistema integral de escritorio para administracion de ventas, control de inventario en tiempo real, registro de prestamos y reportes visuales.
+                                </p>
+                                <ul class="list-unstyled small mb-4">
+                                    <li class="mb-1"><i class="bi bi-check2 text-brand-blue me-2"></i>Cobro ultra rapido optimizado con atajos de teclado.</li>
+                                    <li class="mb-1"><i class="bi bi-check2 text-brand-blue me-2"></i>Monitoreo de ingresos por hora, semana y categorias.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <a href="miscelanea.html" class="btn btn-outline-primary rounded-pill w-100 fw-semibold">Ver caso completo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="entregables" class="py-5 bg-white border-top border-bottom">
+        <div class="container py-lg-4">
+            <div class="text-center mb-5">
+                <h6 class="text-brand-blue text-uppercase fw-bold tracking-wider">Cuentas Claras & Transparencia</h6>
+                <h2 class="display-6 fw-bold">Que entregamos con tu proyecto</h2>
+                <p class="text-muted">No te dejamos solo con un ejecutable. Al concluir el desarrollo, recibes un paquete integral con el control total y la documentacion de tu software.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 card-service rounded-4 shadow-sm bg-light border-0">
+                        <div class="card-body">
+                            <div class="icon-box mb-3 bg-white shadow-sm">
+                                <i class="bi bi-file-earmark-person-fill text-brand-blue fs-3"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Manual de Usuario</h5>
+                            <p class="text-muted small mb-0">Guia paso a paso con capturas de pantalla y explicacion detallada de cada modulo para que tu o tus empleados comiencen a operar el sistema desde el primer dia sin complicaciones.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 card-service rounded-4 shadow-sm bg-light border-0">
+                        <div class="card-body">
+                            <div class="icon-box mb-3 bg-white shadow-sm">
+                                <i class="bi bi-code-slash text-brand-blue fs-3"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Codigo Fuente Completo</h5>
+                            <p class="text-muted small mb-0">Propiedad 100% tuya. Entregamos el repositorio limpio y comentado, garantizando que tu proyecto no dependa exclusivamente de nosotros y puedas escalar a futuro con quien decidas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 card-service rounded-4 shadow-sm bg-light border-0">
+                        <div class="card-body">
+                            <div class="icon-box mb-3 bg-white shadow-sm">
+                                <i class="bi bi-hdd-network-fill text-brand-blue fs-3"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Manual Tecnico & Despliegue</h5>
+                            <p class="text-muted small mb-0">Documentacion de arquitectura, estructura de base de datos, configuracion de cadenas de conexion y pasos exactos para instalar o restaurar el software en un nuevo equipo o servidor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 card-service rounded-4 shadow-sm bg-light border-0">
+                        <div class="card-body">
+                            <div class="icon-box mb-3 bg-white shadow-sm">
+                                <i class="bi bi-key-fill text-brand-blue fs-3"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Credenciales & Accesos</h5>
+                            <p class="text-muted small mb-0">Listado confidencial con los accesos de administracion, llaves de API, credenciales maestras y usuarios de prueba utilizados durante la configuracion.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 card-service rounded-4 shadow-sm bg-light border-0">
+                        <div class="card-body">
+                            <div class="icon-box mb-3 bg-white shadow-sm">
+                                <i class="bi bi-patch-check-fill text-brand-blue fs-3"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Poliza de Garantia & Soporte</h5>
+                            <p class="text-muted small mb-0">Documento que respalda la correccion sin costo adicional de posibles errores, bugs o ajustes menores durante el periodo posterior a la entrega pactada.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 card-service rounded-4 shadow-sm bg-light border-0">
+                        <div class="card-body">
+                            <div class="icon-box mb-3 bg-white shadow-sm">
+                                <i class="bi bi-database-down text-brand-blue fs-3"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Script & Respaldo Inicial</h5>
+                            <p class="text-muted small mb-0">Copia de seguridad limpia y scripts SQL para reconstruir las tablas, relaciones y datos base de tu negocio en caso de formateo o migracion de computadoras.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="filosofia" class="py-5">
+        <div class="container py-lg-4">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-6">
+                    <h6 class="text-brand-blue text-uppercase fw-bold">Nuestra Forma de Trabajar</h6>
+                    <h2 class="display-6 fw-bold mb-3">Software claro, funcional y sin rodeos</h2>
+                    <p class="text-muted">
+                        No cobramos por funciones que no vas a usar ni recomendamos gastos innecesarios. Analizamos tus necesidades exactas para ofrecerte la solucion mas practica, economica y confiable.
+                    </p>
+                    <div class="row g-3 mt-2">
+                        <div class="col-sm-6">
+                            <div class="border rounded-3 p-3 bg-white">
+                                <i class="bi bi-patch-check-fill text-brand-blue fs-4 mb-2 d-block"></i>
+                                <h6 class="fw-bold mb-1">Garantia Por Escrito</h6>
+                                <p class="text-muted small mb-0">Cada desarrollo de software o reparacion tecnica cuenta con respaldo y garantia asegurada.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="border rounded-3 p-3 bg-white">
+                                <i class="bi bi-geo-alt-fill text-brand-blue fs-4 mb-2 d-block"></i>
+                                <h6 class="fw-bold mb-1">Comodidad Total</h6>
+                                <p class="text-muted small mb-0">Solucionamos tus problemas de equipo en la puerta de tu hogar o negocio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="card border-0 bg-brand-dark text-white rounded-4 p-4 shadow-lg">
+                        <h4 class="fw-bold mb-3">¿Listo para empezar?</h4>
+                        <p class="text-light text-opacity-75 small mb-4">
+                            Ya sea crear una app web, un sistema para tu negocio, o reparar y optimizar tu equipo de computo con garantia, estamos listos para ayudarte.
+                        </p>
+                        <a href="#contacto" class="btn btn-brand rounded-pill w-100 py-2 fw-semibold">Contactanos via mensaje</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto" class="py-5 bg-white border-top">
+        <div class="container py-lg-4" style="max-width: 700px;">
+            <div class="text-center mb-4">
+                <h2 class="display-6 fw-bold">Cuentanos sobre tu idea o problema</h2>
+                <p class="text-muted">Dejanos un mensaje con lo que necesitas y te responderemos a la brevedad con una cotizacion transparente y viable.</p>
+            </div>
+            <div class="card shadow-sm border rounded-4 p-4">
+                <form onsubmit="event.preventDefault(); alert('Gracias por comunicarte. Responderemos tu solicitud en breve.');">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Nombre o Negocio</label>
+                            <input type="text" class="form-control" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small fw-semibold">Correo Electronico o Telefono</label>
+                            <input type="text" class="form-control" placeholder="nombre@correo.com o WhatsApp" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label small fw-semibold">Tipo de Solicitud</label>
+                            <select class="form-select">
+                                <option selected>Aplicacion Web</option>
+                                <option>Sistema de Escritorio / Ventas</option>
+                                <option>Soporte Tecnico a Domicilio</option>
+                                <option>Mantenimiento y Reparacion de Equipo</option>
+                                <option>Asesoria de Compra de Hardware</option>
+                                <option>Otro servicio tecnico a medida</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label small fw-semibold">Describe tu proyecto o inconveniente</label>
+                            <textarea class="form-control" rows="4" placeholder="¿Que necesitas que haga el sistema o que problema presenta tu equipo?" required></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-brand rounded-pill w-100 py-2 fw-bold">Enviar Consulta</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-brand-dark text-white py-4 border-top border-secondary border-opacity-25">
+        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+            <div class="small text-light text-opacity-75">
+                &copy; 2026 <strong>Chip&amp;Chapa</strong>. Todos los derechos reservados.
+            </div>
+            <div class="d-flex gap-3 fs-5">
+                <a href="#contacto" class="text-light text-opacity-75 hover-opacity text-decoration-none"><i class="bi bi-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
