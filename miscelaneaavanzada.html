@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miscelanea POS Pro - Sistema Punto de Venta Empresarial | Chip&Chapa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --brand-blue: #2563eb;
+            --brand-blue-hover: #1d4ed8;
+            --brand-dark: #0f172a;
+        }
+
+        .bg-brand-dark {
+            background-color: var(--brand-dark);
+        }
+
+        .text-brand-blue {
+            color: var(--brand-blue);
+        }
+
+        .btn-brand {
+            background-color: var(--brand-blue);
+            color: #ffffff;
+            border: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn-brand:hover {
+            background-color: var(--brand-blue-hover);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .img-card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .img-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .feature-badge {
+            background-color: #f1f5f9;
+            border: 1px solid #cbd5e1;
+            color: #1e293b;
+            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+    </style>
+</head>
+<body class="bg-light text-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brand-dark sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="index.html">
+                <img src="Imagenes/logochip.png" alt="Chip&Chapa Logo" width="36" height="36" class="d-inline-block align-text-top me-2 rounded">
+                Chip<span class="text-brand-blue">&</span>Chapa
+            </a>
+            <div class="ms-auto">
+                <a class="btn btn-outline-light rounded-pill px-3 btn-sm" href="index.html#proyectos">
+                    <i class="bi bi-arrow-left me-1"></i> Volver al portafolio
+                </a>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-brand-dark text-white py-5 border-bottom border-secondary border-opacity-25">
+        <div class="container py-lg-4">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">Punto de venta Pro</h1>
+                    <p class="lead text-light text-opacity-75 mb-4">
+                        Plataforma integral de escritorio diseñada para establecimientos comerciales y abarroteras de alta rotacion. Centraliza auditoria de ventas por turno, control estricto de existencias, cartera de credito local y reportes en tiempo real.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2">WPF / XAML</span>
+                        <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2">C# .NET</span>
+                        <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2">Auditoria de Caja</span>
+                        <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2">Control de Stock Critico</span>
+                        <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2">Gestion de Deudores</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <div class="p-3 bg-secondary bg-opacity-10 rounded-4 border border-secondary border-opacity-25 text-start">
+                        <small class="text-light text-opacity-50 text-uppercase fw-semibold d-block mb-1">Capacidad Operativa</small>
+                        <h5 class="fw-bold text-white mb-2">Escalabilidad para Mostrador</h5>
+                        <p class="small text-light text-opacity-75 mb-0">Arquitectura de persistencia local y soporte para operacion continua con teclado fisico sin depender de conexion a internet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container py-5">
+        <section class="row align-items-center gy-4 mb-5 pb-lg-4">
+            <div class="col-lg-5">
+                <span class="text-brand-blue text-uppercase fw-bold small">Dashboard Operativo</span>
+                <h2 class="display-6 fw-bold mb-3">Centro de Control de Tienda</h2>
+                <p class="text-muted">Panel directivo que consolida los indicadores clave del dia en un solo vistazo antes de ingresar a los submodulos de operacion:</p>
+                <div class="d-flex flex-column gap-2 mb-3">
+                    <div class="feature-badge"><i class="bi bi-cash-stack text-success"></i> Ingresos y venta bruta acumulada al instante</div>
+                    <div class="feature-badge"><i class="bi bi-receipt text-primary"></i> Contador y promedio de transacciones por turno</div>
+                    <div class="feature-badge"><i class="bi bi-wallet2 text-danger"></i> Saldo vivo en fiados y cuentas por cobrar</div>
+                    <div class="feature-badge"><i class="bi bi-exclamation-triangle text-warning"></i> Alerta temprana de articulos por agotarse</div>
+                </div>
+                <p class="small text-muted mb-0">Incluye accesos rapidos mediante teclas de funcion (F1 para cobro, F2 para ventas, F3 para productos) y apertura de terminal identificada por cajero.</p>
+            </div>
+            <div class="col-lg-7">
+                <div class="img-card">
+                    <img src="Imagenes/Miscleanea/Menu.png" alt="Centro de Control de Tienda Miscelanea POS Pro" class="img-fluid" onerror="this.src='Imagenes/Miscelanea/Menu.png'">
+                </div>
+            </div>
+        </section>
+        <hr class="my-5 border-secondary-subtle">
+        <section class="row align-items-center gy-4 mb-5 pb-lg-4 flex-lg-row-reverse">
+            <div class="col-lg-5">
+                <span class="text-brand-blue text-uppercase fw-bold small">Auditoria & Seguridad</span>
+                <h2 class="display-6 fw-bold mb-3">Modulo de Registro de Ventas</h2>
+                <p class="text-muted">Monitoreo y trazabilidad total de cada transaccion realizada en el negocio. Permite auditar ingresos sin posibilidad de alteraciones no autorizadas.</p>
+                <ul class="list-unstyled text-muted small mb-4">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-blue me-2"></i><strong>Folio unico y marca de tiempo:</strong> Trazabilidad exacta de fecha, hora y cajero responsable.</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-blue me-2"></i><strong>Desglose por ticket:</strong> Consulta visual con unidades vendidas, precio unitario, cambio entregado y total neto.</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-blue me-2"></i><strong>Corte de caja del periodo:</strong> Separacion de ingresos segun metodo de pago (efectivo, tarjeta o fiado).</li>
+                </ul>
+            </div>
+            <div class="col-lg-7">
+                <div class="img-card">
+                    <img src="Imagenes/Miscleanea/Ventas.png" alt="Modulo de Auditoria y Registro de Ventas" class="img-fluid" onerror="this.src='Imagenes/Miscelanea/Ventas.png'">
+                </div>
+            </div>
+        </section>
+        <hr class="my-5 border-secondary-subtle">
+        <section class="row align-items-center gy-4 mb-5 pb-lg-4">
+            <div class="col-lg-5">
+                <span class="text-brand-blue text-uppercase fw-bold small">Almacen & Abastecimiento</span>
+                <h2 class="display-6 fw-bold mb-3">Control Avanzado de Inventario</h2>
+                <p class="text-muted">
+                    Diseñado para catálogos extensos con busqueda rapida por SKU, codigo de barras, nombre o categoria. Proporciona control riguroso sobre existencias fisicas y valor economico del almacen.
+                </p>
+                <div class="row g-2 mb-3">
+                    <div class="col-sm-6">
+                        <div class="p-3 bg-white border rounded-3 h-100">
+                            <span class="fw-bold text-dark d-block mb-1"><i class="bi bi-graph-up-arrow text-success me-1"></i> Valuacion Total</span>
+                            <small class="text-muted">Calculo automatico del capital invertido en mercancia a precio de venta y costo.</small>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-3 bg-white border rounded-3 h-100">
+                            <span class="fw-bold text-dark d-block mb-1"><i class="bi bi-bell-fill text-danger me-1"></i> Stock Critico</span>
+                            <small class="text-muted">Filtro directo de faltantes para generar ordenes de compra oportunas.</small>
+                        </div>
+                    </div>
+                </div>
+                <p class="small text-muted mb-0">
+                    Soporta exportacion de catalogo en CSV y recepcion rapida de mercancia para evitar discrepancias de inventario.
+                </p>
+            </div>
+            <div class="col-lg-7">
+                <div class="img-card">
+                    <img src="Imagenes/Miscleanea/Inventario.png" alt="Modulo de Inventario y Gestion de Stock" class="img-fluid" onerror="this.src='Imagenes/Miscelanea/Inventario.png'">
+                </div>
+            </div>
+        </section>
+        <hr class="my-5 border-secondary-subtle">
+        <section class="row align-items-center gy-4 mb-5 flex-lg-row-reverse">
+            <div class="col-lg-5">
+                <span class="text-brand-blue text-uppercase fw-bold small">Cuentas por Cobrar</span>
+                <h2 class="display-6 fw-bold mb-3">Prestamos y Deudores (Fiado)</h2>
+                <p class="text-muted">
+                    Herramienta fundamental para comercios locales que otorgan confianza a sus clientes frecuentes. Digitaliza la libreta tradicional de cobro eliminando cuentas perdidas y confusiones de pago.
+                </p>
+                <div class="p-3 bg-white border rounded-4 shadow-sm mb-3">
+                    <ul class="list-unstyled mb-0 small text-muted">
+                        <li class="mb-2"><i class="bi bi-person-lines-fill text-brand-blue me-2"></i>Ficha por cliente con estado actual (Pendiente, Abonado, Liquidado).</li>
+                        <li class="mb-2"><i class="bi bi-arrow-repeat text-brand-blue me-2"></i>Boton de abono rapido con recalculo inmediato del saldo pendiente.</li>
+                        <li><i class="bi bi-calendar-event text-brand-blue me-2"></i>Registro historico de fecha de alta de cada credito concedido.</li>
+                    </ul>
+                </div>
+                <p class="small text-muted mb-0">
+                    Visualiza en un panel lateral el monto global adeudado y el numero de clientes con saldo activo para mantener saludable el flujo de efectivo.
+                </p>
+            </div>
+            <div class="col-lg-7">
+                <div class="img-card">
+                    <img src="Imagenes/Miscleanea/Prestamos.png" alt="Modulo de Prestamos y Deudores" class="img-fluid" onerror="this.src='Imagenes/Miscelanea/Prestamos.png'">
+                </div>
+            </div>
+        </section>
+        <section class="bg-brand-dark text-white rounded-4 p-5 text-center mt-5 shadow-lg">
+            <h3 class="fw-bold mb-3">¿Buscas un sistema de caja y control para tu negocio?</h3>
+            <p class="text-light text-opacity-75 max-w-600 mx-auto mb-4">
+                Desarrollamos soluciones de software a medida, rapidas, intuitivas y con soporte tecnico garantizado directamente en tu establecimiento.
+            </p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center">
+                <a href="index.html#contacto" class="btn btn-brand btn-lg rounded-pill px-5 fw-bold">Solicitar Demostracion</a>
+                <a href="index.html#proyectos" class="btn btn-outline-light btn-lg rounded-pill px-4">Ver Otros Proyectos</a>
+            </div>
+        </section>
+
+    </main>
+    <footer class="bg-brand-dark text-white py-4 border-top border-secondary border-opacity-25 mt-5">
+        <div class="container text-center small text-light text-opacity-75">
+            &copy; 2026 <strong>Chip&amp;Chapa</strong>. Todos los derechos reservados.
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
