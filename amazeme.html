@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmazeMe - Caso de Estudio | Chip&Chapa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --brand-blue: #2563eb;
+            --brand-blue-hover: #1d4ed8;
+            --brand-dark: #0f172a;
+        }
+
+        .bg-brand-dark {
+            background-color: var(--brand-dark);
+        }
+
+        .text-brand-blue {
+            color: var(--brand-blue);
+        }
+
+        .btn-brand {
+            background-color: var(--brand-blue);
+            color: #ffffff;
+            border: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+            .btn-brand:hover {
+                background-color: var(--brand-blue-hover);
+                color: #ffffff;
+            }
+
+        .img-placeholder {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+            .img-placeholder img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+    </style>
+</head>
+<body class="bg-light text-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-brand-dark sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="#inicio">
+                <img src="/Imagenes/Copia de Servicios Chip & Chapa C1.png" alt="Chip&Chapa Logo" width="36" height="36" class="d-inline-block align-text-top me-2 rounded">
+                Chip<span class="text-brand-blue">&</span>Chapa
+            </a>
+            <div class="ms-auto">
+                <a class="btn btn-outline-light rounded-pill px-3 btn-sm" href="index.html#proyectos">
+                    <i class="bi bi-arrow-left me-1"></i> Volver al inicio
+                </a>
+            </div>
+        </div>
+    </nav>
+    <header class="bg-brand-dark text-white py-5 border-bottom border-secondary border-opacity-25">
+        <div class="container py-lg-4">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-8">
+                    <span class="badge bg-primary-subtle text-brand-blue px-3 py-2 rounded-pill mb-3 fw-semibold">
+                        Pagina Web
+                    </span>
+                    <h1 class="display-4 fw-bold mb-3">AmazeMe</h1>
+                    <p class="lead text-light text-opacity-75 mb-4">
+                        Sistema integral para seleccion guiada de regalos, gestion de usuarios y motor de fidelizacion mediante recompensas.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2">ASP.NET Core</span>
+                        <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2">Entity Framework Core</span>
+                        <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2">SQL Server</span>
+                        <span class="badge bg-secondary bg-opacity-25 text-light px-3 py-2">Bootstrap 5.3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container py-5">
+        <section class="row align-items-center gy-4 mb-5 pb-lg-4">
+            <div class="col-lg-6">
+                <h6 class="text-brand-blue text-uppercase fw-bold">El Concepto</h6>
+                <h2 class="display-6 fw-bold mb-3">Eliminando la friccion al elegir regalos</h2>
+                <p class="text-muted">
+                    El objetivo principal de AmazeMe es transformar la incertidumbre del comprador en una experiencia agil. En lugar de navegar cientos de categorias confusas, la plataforma toma las riendas del proceso guiando al cliente con preguntas simples para dar con la recomendacion adecuada.
+                </p>
+                <div class="border-start border-primary border-3 ps-3 my-3">
+                    <p class="mb-0 text-secondary fst-italic">
+                        Diseñado como un modelo de comercio inteligente que beneficia tanto al cliente con descuentos como al negocio con compras recurrentes.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="img-placeholder shadow-sm">
+                    <img src="/Imagenes/Inicio-1.png" alt="Inicio de AmazeMe" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </section>
+        <hr class="my-5 border-secondary-subtle">
+        <section class="row align-items-center gy-4 mb-5 pb-lg-4 flex-lg-row-reverse">
+            <div class="col-lg-6">
+                <h6 class="text-brand-blue text-uppercase fw-bold">Experiencia de Usuario</h6>
+                <h2 class="display-6 fw-bold mb-3">Encuesta interactiva paso a paso</h2>
+                <p class="text-muted">
+                    Se diseño una interfaz minimalista donde solo se muestra una pregunta a la vez para mantener el foco del usuario. Cuenta con soporte de seleccion visual y barra de progreso calculada en tiempo real.
+                </p>
+                <ul class="list-unstyled text-muted small">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-blue me-2"></i>Avance dinamico sin recarga molesta de pagina.</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-blue me-2"></i>Seleccion clara entre familiares, amigos y companeros.</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-brand-blue me-2"></i>Captura controlada de parametros para el algoritmo de sugerencias.</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="img-placeholder shadow-sm">
+                    <img src="/Imagenes/Encuesta.png" alt="Cuestionario paso a paso" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </section>
+        <hr class="my-5 border-secondary-subtle">
+        <section class="row align-items-center gy-4 mb-5 pb-lg-4">
+            <div class="col-lg-6">
+                <h6 class="text-brand-blue text-uppercase fw-bold">Seguridad & Datos</h6>
+                <h2 class="display-6 fw-bold mb-3">Autenticacion y manejo de errores</h2>
+                <p class="text-muted">
+                    Tanto el registro como el inicio de sesion fueron estructurados con comprobacion de campos y encriptado robusto de contrasenas mediante BCrypt.
+                </p>
+                <div class="row g-3 mt-1">
+                    <div class="col-sm-6">
+                        <div class="p-3 bg-white border rounded-3 h-100">
+                            <h6 class="fw-bold mb-1"><i class="bi bi-lock text-brand-blue me-1"></i> Contrasenas</h6>
+                            <p class="small text-muted mb-0">Proteccion criptografica antes de llegar a la base de datos.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-3 bg-white border rounded-3 h-100">
+                            <h6 class="fw-bold mb-1"><i class="bi bi-exclamation-octagon text-brand-blue me-1"></i> Retroalimentacion</h6>
+                            <p class="small text-muted mb-0">Mensajes de error visuales que guian al usuario sin confusiones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="img-placeholder shadow-sm">
+                    <img src="/Imagenes/InicioSesionError.png" alt="Modulo de acceso seguro" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </section>
+        <hr class="my-5 border-secondary-subtle">
+        <section class="row align-items-center gy-4 mb-5">
+            <div class="col-lg-6">
+                <h6 class="text-brand-blue text-uppercase fw-bold">Retencion</h6>
+                <h2 class="display-6 fw-bold mb-3">Amazings: Moneda de recompensa</h2>
+                <p class="text-muted">
+                    El sistema integra un modulo de balance de puntos donde cada transaccion registra puntos ganados y puntos gastados en base de datos, incentivando compras futuras y aumentando el valor de vida del cliente.
+                </p>
+                <div class="p-3 bg-white border rounded-4 shadow-sm">
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="bi bi-coin text-brand-blue fs-1"></i>
+                        <div>
+                            <h6 class="fw-bold mb-0">Sistema de Lealtad Integrado</h6>
+                            <small class="text-muted">Conversion de puntos en fondos de descuento listos para usar.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="img-placeholder shadow-sm">
+                    <img src="/Imagenes/Inicio.png" alt="Seccion de recompensas" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </section>
+        <section class="bg-brand-dark text-white rounded-4 p-5 text-center mt-5 shadow-lg">
+            <h3 class="fw-bold mb-3">¿Deseas una plataforma a la medida para tu negocio?</h3>
+            <p class="text-light text-opacity-75 max-w-600 mx-auto mb-4">
+                Construimos soluciones digitales completas que combinan diseno limpio y funcionalidad solida.
+            </p>
+            <a href="index.html#contacto" class="btn btn-brand btn-lg rounded-pill px-5 fw-bold">Solicitar Cotizacion</a>
+        </section>
+    </main>
+    <footer class="bg-brand-dark text-white py-4 border-top border-secondary border-opacity-25 mt-5">
+        <div class="container text-center small text-light text-opacity-75">
+            &copy; 2026 <strong>Chip&amp;Chapa</strong>. Todos los derechos reservados.
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
