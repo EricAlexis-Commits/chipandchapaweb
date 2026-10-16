@@ -1,0 +1,46 @@
+ :root {
+            --brand-blue: #2563eb;
+            --brand-blue-hover: #1d4ed8;
+            --brand-dark: #0f172a;
+        }
+
+        .bg-brand-dark {
+            background-color: var(--brand-dark);
+        }
+
+        .text-brand-blue {
+            color: var(--brand-blue);
+        }
+
+        .btn-brand {
+            background-color: var(--brand-blue);
+            color: #ffffff;
+            border: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+            .btn-brand:hover {
+                background-color: var(--brand-blue-hover);
+                color: #ffffff;
+                transform: translateY(-2px);
+            }
+
+        .card-service {
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .card-service:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+            }
+
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(37, 99, 235, 0.12);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
