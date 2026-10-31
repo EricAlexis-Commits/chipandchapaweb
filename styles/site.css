@@ -1,0 +1,340 @@
+/* ==========================================================
+   Chip&Chapa - Sistema de diseño global (estilo Google)
+   ========================================================== */
+:root {
+    --cc-blue: #2563eb;
+    --cc-blue-hover: #1d4ed8;
+    --cc-blue-soft: rgba(37, 99, 235, 0.1);
+    --cc-dark: #0f172a;
+    --cc-ink: #202124;
+    --cc-text: #3c4043;
+    --cc-muted: #5f6368;
+    --cc-surface: #f8fafd;
+    --cc-border: #dadce0;
+    --cc-radius: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id], header[id] {
+    scroll-margin-top: 76px;
+}
+
+body {
+    font-family: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--cc-surface);
+    color: var(--cc-text);
+    letter-spacing: .01rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--cc-ink);
+}
+
+.bg-cc-dark {
+    background: var(--cc-dark);
+}
+
+    .bg-cc-dark h1, .bg-cc-dark h2, .bg-cc-dark h3, .bg-cc-dark h4, .bg-cc-dark h5 {
+        color: #fff;
+    }
+
+.text-cc-blue {
+    color: var(--cc-blue) !important;
+}
+
+.eyebrow {
+    color: var(--cc-blue);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .8rem;
+    letter-spacing: .08em;
+}
+
+/* ---------- Navbar ---------- */
+.cc-nav {
+    background: var(--cc-dark);
+    padding: .85rem 0;
+}
+
+    .cc-nav .navbar-brand {
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.35rem;
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+    }
+
+    .cc-nav .nav-link {
+        color: rgba(255,255,255,.75);
+        font-weight: 500;
+        padding: .5rem 1rem;
+        border-radius: 999px;
+        transition: all .2s;
+    }
+
+        .cc-nav .nav-link:hover {
+            color: #fff;
+            background: rgba(255,255,255,.08);
+        }
+
+        .cc-nav .nav-link.active {
+            color: #fff;
+            background: rgba(37,99,235,.35);
+        }
+
+/* ---------- Botones tipo píldora ---------- */
+.btn-cc, .btn-cc-outline, .btn-cc-light {
+    border-radius: 999px;
+    font-weight: 500;
+    padding: .65rem 1.6rem;
+    transition: all .2s ease;
+    border: 1px solid transparent;
+}
+
+.btn-cc {
+    background: var(--cc-blue);
+    color: #fff;
+}
+
+    .btn-cc:hover {
+        background: var(--cc-blue-hover);
+        color: #fff;
+        box-shadow: 0 2px 8px rgba(37,99,235,.4);
+    }
+
+.btn-cc-outline {
+    border-color: var(--cc-border);
+    color: var(--cc-blue);
+    background: transparent;
+}
+
+    .btn-cc-outline:hover {
+        background: rgba(37,99,235,.05);
+        border-color: var(--cc-blue);
+        color: var(--cc-blue-hover);
+    }
+
+.btn-cc-light {
+    border-color: rgba(255,255,255,.4);
+    color: #fff;
+    background: transparent;
+}
+
+    .btn-cc-light:hover {
+        background: rgba(255,255,255,.1);
+        color: #fff;
+        border-color: #fff;
+    }
+
+/* ---------- Tarjetas ---------- */
+.cc-card {
+    background: #fff;
+    border: 1px solid var(--cc-border);
+    border-radius: var(--cc-radius);
+    transition: box-shadow .2s cubic-bezier(.2,0,0,1), transform .2s cubic-bezier(.2,0,0,1);
+}
+
+    .cc-card:hover {
+        box-shadow: 0 4px 16px rgba(60,64,67,.12);
+        transform: translateY(-2px);
+    }
+
+.cc-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    flex-shrink: 0;
+    background: var(--cc-blue-soft);
+    color: var(--cc-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.cc-chip {
+    display: inline-block;
+    padding: .35rem .9rem;
+    border-radius: 999px;
+    font-size: .8rem;
+    font-weight: 500;
+    background: var(--cc-blue-soft);
+    color: var(--cc-blue);
+    border: 1px solid rgba(37,99,235,.2);
+}
+
+.cc-chip-dark {
+    background: rgba(255,255,255,.08);
+    color: #fff;
+    border-color: rgba(255,255,255,.15);
+}
+
+/* ---------- Hero ---------- */
+.cc-hero {
+    background: var(--cc-dark);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+    .cc-hero::before {
+        content: "";
+        position: absolute;
+        width: 520px;
+        height: 520px;
+        right: -120px;
+        top: -140px;
+        background: radial-gradient(circle, rgba(37,99,235,.35), transparent 70%);
+        pointer-events: none;
+    }
+
+    .cc-hero .lead {
+        color: rgba(255,255,255,.75);
+    }
+
+.mascot-hero {
+    width: min(100%, 420px);
+    filter: drop-shadow(0 12px 30px rgba(37,99,235,.35));
+    animation: cc-float 5s ease-in-out infinite;
+}
+
+@keyframes cc-float {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mascot-hero {
+        animation: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ---------- Secciones ---------- */
+.cc-section {
+    padding: 5rem 0;
+}
+
+.cc-section-white {
+    background: #fff;
+    border-top: 1px solid var(--cc-border);
+    border-bottom: 1px solid var(--cc-border);
+}
+
+/* Proyectos */
+.project-img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    background: #f1f3f4;
+    border-bottom: 1px solid var(--cc-border);
+}
+
+/* Equipo */
+.avatar-ring {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--cc-blue);
+    overflow: hidden;
+    background: var(--cc-blue-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+    .avatar-ring img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+/* Formularios */
+.form-control, .form-select {
+    border: 1px solid var(--cc-border);
+    border-radius: 12px;
+    padding: .65rem .9rem;
+}
+
+    .form-control:focus, .form-select:focus {
+        border-color: var(--cc-blue);
+        box-shadow: 0 0 0 3px rgba(37,99,235,.18);
+    }
+
+/* Capturas de proyecto (para las páginas de caso) */
+.shot {
+    padding: 8px;
+    overflow: hidden;
+}
+
+    .shot img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 14px;
+        background: #f1f3f4;
+    }
+
+/* WhatsApp flotante */
+.wa-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1030;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #25d366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,.25);
+    transition: transform .2s;
+}
+
+    .wa-float:hover {
+        color: #fff;
+        transform: scale(1.08);
+    }
+
+/* Footer */
+.cc-footer {
+    background: var(--cc-dark);
+    color: rgba(255,255,255,.7);
+}
+
+    .cc-footer a {
+        color: rgba(255,255,255,.7);
+        text-decoration: none;
+    }
+
+        .cc-footer a:hover {
+            color: #fff;
+        }
+
+/* Atajos de teclado (Miscelánea) */
+.shortcut-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: var(--cc-surface);
+    border: 1px solid var(--cc-border);
+    font-family: 'Roboto Mono', monospace;
+    font-size: .75rem;
+    color: var(--cc-ink);
+}
