@@ -1,17 +1,26 @@
 /* ==========================================================
-   Chip&Chapa - Sistema de diseño global (estilo Google)
+   Chip&Chapa - Sistema de Diseño Global (Estilo Google)
    ========================================================== */
+
 :root {
-    --cc-blue: #2563eb;
-    --cc-blue-hover: #1d4ed8;
-    --cc-blue-soft: rgba(37, 99, 235, 0.1);
-    --cc-dark: #0f172a;
+    /* Google Primary Brand */
+    --cc-blue: #1a73e8;
+    --cc-blue-hover: #1557bf;
+    --cc-blue-soft: #e8f0fe;
+    --cc-blue-active: #174ea6;
+
+    /* Google Pure Neutrals (Negro Puro y Escala Neutral) */
+    --cc-black: #000000;
+    --cc-dark: #000000;
+    --cc-dark-surface: #121212;
     --cc-ink: #202124;
     --cc-text: #3c4043;
     --cc-muted: #5f6368;
-    --cc-surface: #f8fafd;
+    --cc-surface: #ffffff;
+    --cc-surface-variant: #f8f9fa;
     --cc-border: #dadce0;
-    --cc-radius: 20px;
+    --cc-radius: 16px;
+    --cc-radius-pill: 9999px;
 }
 
 html {
@@ -24,22 +33,25 @@ section[id], header[id] {
 
 body {
     font-family: 'Google Sans', 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: var(--cc-surface);
+    background: var(--cc-surface-variant);
     color: var(--cc-text);
     letter-spacing: .01rem;
+    -webkit-font-smoothing: antialiased;
 }
 
+/* ---------- Tipografía y Encabezados ---------- */
 h1, h2, h3, h4, h5, h6 {
     color: var(--cc-ink);
+    font-weight: 700;
 }
 
-.bg-cc-dark {
-    background: var(--cc-dark);
+/* Títulos con contraste asegurado en todos los bloques oscuros / hero */
+.cc-hero h1, .cc-hero h2, .cc-hero h3, .cc-hero h4, .cc-hero h5, .cc-hero h6,
+.bg-cc-dark h1, .bg-cc-dark h2, .bg-cc-dark h3, .bg-cc-dark h4, .bg-cc-dark h5,
+.cc-nav h1, .cc-nav h2, .cc-nav h3, .cc-nav h4, .cc-nav h5,
+.cc-footer h1, .cc-footer h2, .cc-footer h3, .cc-footer h4, .cc-footer h5 {
+    color: #ffffff !important;
 }
-
-    .bg-cc-dark h1, .bg-cc-dark h2, .bg-cc-dark h3, .bg-cc-dark h4, .bg-cc-dark h5 {
-        color: white;
-    }
 
 .text-cc-blue {
     color: var(--cc-blue) !important;
@@ -53,95 +65,106 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: .08em;
 }
 
-/* ---------- Navbar ---------- */
+/* ---------- Fondos Negros (Reemplazo de tonos azulados) ---------- */
+.bg-cc-dark {
+    background: var(--cc-black) !important;
+}
+
+/* ---------- Barra de Navegación ---------- */
 .cc-nav {
-    background: var(--cc-dark);
+    background: var(--cc-black) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     padding: .85rem 0;
 }
 
-    .cc-nav .navbar-brand {
-        color: #fff;
-        font-weight: 700;
-        font-size: 1.35rem;
-        display: flex;
-        align-items: center;
-        gap: .6rem;
-    }
+.cc-nav .navbar-brand {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.35rem;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+}
 
-    .cc-nav .nav-link {
-        color: rgba(255,255,255,.75);
-        font-weight: 500;
-        padding: .5rem 1rem;
-        border-radius: 999px;
-        transition: all .2s;
-    }
+.cc-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    font-size: .95rem;
+    padding: .5rem 1rem;
+    border-radius: var(--cc-radius-pill);
+    transition: all .2s ease;
+}
 
-        .cc-nav .nav-link:hover {
-            color: #fff;
-            background: rgba(255,255,255,.08);
-        }
+.cc-nav .nav-link:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.12);
+}
 
-        .cc-nav .nav-link.active {
-            color: #fff;
-            background: rgba(37,99,235,.35);
-        }
+.cc-nav .nav-link.active {
+    color: #ffffff;
+    background: rgba(26, 115, 232, 0.45);
+}
 
-/* ---------- Botones tipo píldora ---------- */
+/* ---------- Botones Estilo Google Material ---------- */
 .btn-cc, .btn-cc-outline, .btn-cc-light {
-    border-radius: 999px;
+    border-radius: var(--cc-radius-pill);
     font-weight: 500;
     padding: .65rem 1.6rem;
     transition: all .2s ease;
     border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
 }
 
 .btn-cc {
     background: var(--cc-blue);
-    color: #fff;
+    color: #ffffff;
 }
 
-    .btn-cc:hover {
-        background: var(--cc-blue-hover);
-        color: #fff;
-        box-shadow: 0 2px 8px rgba(37,99,235,.4);
-    }
+.btn-cc:hover {
+    background: var(--cc-blue-hover);
+    color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+}
 
 .btn-cc-outline {
     border-color: var(--cc-border);
     color: var(--cc-blue);
-    background: transparent;
+    background: #ffffff;
 }
 
-    .btn-cc-outline:hover {
-        background: rgba(37,99,235,.05);
-        border-color: var(--cc-blue);
-        color: var(--cc-blue-hover);
-    }
+.btn-cc-outline:hover {
+    background: var(--cc-blue-soft);
+    border-color: var(--cc-blue);
+    color: var(--cc-blue-hover);
+}
 
 .btn-cc-light {
-    border-color: rgba(255,255,255,.4);
-    color: #fff;
+    border-color: rgba(255, 255, 255, 0.35);
+    color: #ffffff;
     background: transparent;
 }
 
-    .btn-cc-light:hover {
-        background: rgba(255,255,255,.1);
-        color: #fff;
-        border-color: #fff;
-    }
-
-/* ---------- Tarjetas ---------- */
-.cc-card {
-    background: #fff;
-    border: 1px solid var(--cc-border);
-    border-radius: var(--cc-radius);
-    transition: box-shadow .2s cubic-bezier(.2,0,0,1), transform .2s cubic-bezier(.2,0,0,1);
+.btn-cc-light:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border-color: #ffffff;
 }
 
-    .cc-card:hover {
-        box-shadow: 0 4px 16px rgba(60,64,67,.12);
-        transform: translateY(-2px);
-    }
+/* ---------- Tarjetas y Elevaciones Google ---------- */
+.cc-card {
+    background: #ffffff;
+    border: 1px solid var(--cc-border);
+    border-radius: var(--cc-radius);
+    transition: box-shadow .2s cubic-bezier(.2, 0, 0, 1), transform .2s cubic-bezier(.2, 0, 0, 1);
+}
+
+.cc-card:hover {
+    box-shadow: 0 4px 16px rgba(60, 64, 67, 0.12);
+    transform: translateY(-2px);
+}
 
 .cc-icon {
     width: 48px;
@@ -156,57 +179,47 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.4rem;
 }
 
+/* ---------- Chips y Píldoras Estilo Google ---------- */
 .cc-chip {
     display: inline-block;
     padding: .35rem .9rem;
-    border-radius: 999px;
+    border-radius: var(--cc-radius-pill);
     font-size: .8rem;
     font-weight: 500;
     background: var(--cc-blue-soft);
     color: var(--cc-blue);
-    border: 1px solid rgba(37,99,235,.2);
+    border: 1px solid rgba(26, 115, 232, 0.2);
 }
 
 .cc-chip-dark {
-    background: rgba(255,255,255,.08);
-    color: #fff;
-    border-color: rgba(255,255,255,.15);
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero (Fondo Negro Puro) ---------- */
 .cc-hero {
-    background: var(--cc-dark);
-    color: #fff;
+    background: var(--cc-black) !important;
+    color: #ffffff;
     position: relative;
     overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-    .cc-hero::before {
-        content: "";
-        position: absolute;
-        width: 520px;
-        height: 520px;
-        right: -120px;
-        top: -140px;
-        background: radial-gradient(circle, rgba(37,99,235,.35), transparent 70%);
-        pointer-events: none;
-    }
-
-    .cc-hero .lead {
-        color: rgba(255,255,255,.75);
-    }
+.cc-hero .lead {
+    color: rgba(255, 255, 255, 0.85);
+}
 
 .mascot-hero {
     width: min(100%, 420px);
-    filter: drop-shadow(0 12px 30px rgba(37,99,235,.35));
+    filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.65));
     animation: cc-float 5s ease-in-out infinite;
 }
 
 @keyframes cc-float {
-    0%,100% {
+    0%, 100% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-10px);
     }
@@ -216,19 +229,18 @@ h1, h2, h3, h4, h5, h6 {
     .mascot-hero {
         animation: none;
     }
-
     html {
         scroll-behavior: auto;
     }
 }
 
-/* ---------- Secciones ---------- */
+/* ---------- Secciones de Contenido ---------- */
 .cc-section {
     padding: 5rem 0;
 }
 
 .cc-section-white {
-    background: #fff;
+    background: #ffffff;
     border-top: 1px solid var(--cc-border);
     border-bottom: 1px solid var(--cc-border);
 }
@@ -256,39 +268,41 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto 1rem;
 }
 
-    .avatar-ring img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.avatar-ring img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-/* Formularios */
+/* ---------- Formularios Estilo Google ---------- */
 .form-control, .form-select {
     border: 1px solid var(--cc-border);
     border-radius: 12px;
     padding: .65rem .9rem;
+    color: var(--cc-ink);
+    background-color: #ffffff;
 }
 
-    .form-control:focus, .form-select:focus {
-        border-color: var(--cc-blue);
-        box-shadow: 0 0 0 3px rgba(37,99,235,.18);
-    }
+.form-control:focus, .form-select:focus {
+    border-color: var(--cc-blue);
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+}
 
-/* Capturas de proyecto (para las páginas de caso) */
+/* Capturas de proyecto */
 .shot {
     padding: 8px;
     overflow: hidden;
 }
 
-    .shot img {
-        width: 100%;
-        height: auto;
-        display: block;
-        border-radius: 14px;
-        background: #f1f3f4;
-    }
+.shot img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
+    background: #f1f3f4;
+}
 
-/* WhatsApp flotante */
+/* ---------- WhatsApp Flotante ---------- */
 .wa-float {
     position: fixed;
     right: 20px;
@@ -298,41 +312,43 @@ h1, h2, h3, h4, h5, h6 {
     height: 56px;
     border-radius: 50%;
     background: #25d366;
-    color: #fff;
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.7rem;
-    box-shadow: 0 4px 14px rgba(0,0,0,.25);
-    transition: transform .2s;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    transition: transform .2s ease;
 }
 
-    .wa-float:hover {
-        color: #fff;
-        transform: scale(1.08);
-    }
+.wa-float:hover {
+    color: #ffffff;
+    transform: scale(1.08);
+}
 
-/* Footer */
+/* ---------- Pie de Página (Footer en Negro Puro) ---------- */
 .cc-footer {
-    background: var(--cc-dark);
-    color: rgba(255,255,255,.7);
+    background: var(--cc-black) !important;
+    color: rgba(255, 255, 255, 0.7);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-    .cc-footer a {
-        color: rgba(255,255,255,.7);
-        text-decoration: none;
-    }
+.cc-footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color .2s ease;
+}
 
-        .cc-footer a:hover {
-            color: #fff;
-        }
+.cc-footer a:hover {
+    color: #ffffff;
+}
 
 /* Atajos de teclado (Miscelánea) */
 .shortcut-badge {
     display: inline-block;
     padding: 4px 10px;
     border-radius: 8px;
-    background: var(--cc-surface);
+    background: #f1f3f4;
     border: 1px solid var(--cc-border);
     font-family: 'Roboto Mono', monospace;
     font-size: .75rem;
