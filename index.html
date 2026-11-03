@@ -295,8 +295,14 @@
                             <textarea id="mensaje" name="mensaje" class="form-control" rows="4" placeholder="¿Qué necesitas que haga el sistema o qué problema presenta tu equipo?" maxlength="2000" required></textarea>
                         </div>
                         <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="aceptoPrivacidad" name="acepto_privacidad" value="si" required>
+                                <label class="form-check-label small text-muted" for="aceptoPrivacidad">He leído el <a href="/privacidad/" class="text-cc-blue text-decoration-underline">aviso de privacidad</a></label>
+                            </div>
+                        </div>
+                        <div class="col-12">
                             <button type="submit" class="btn btn-cc w-100 py-3 fw-bold">Enviar consulta</button>
-                            <p class="small text-muted text-center mt-3 mb-0 cc-legal-note">Tus datos están protegidos conforme a la ley y solo se usarán para responder a tu cotización.</p>
+                            <p class="small text-muted text-center mt-3 mb-0 cc-legal-note">Tus datos están protegidos conforme a nuestro <a href="/privacidad/" class="text-muted text-decoration-underline">aviso de privacidad</a> y solo se usarán para responder a tu cotización.</p>
                         </div>
                     </div>
                 </form>
