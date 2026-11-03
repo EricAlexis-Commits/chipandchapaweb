@@ -212,6 +212,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mascot-hero {
     width: min(100%, 420px);
+    height: auto;
     filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.65));
     animation: cc-float 5s ease-in-out infinite;
 }
