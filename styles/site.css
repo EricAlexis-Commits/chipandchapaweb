@@ -212,6 +212,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mascot-hero {
     width: min(100%, 420px);
+    height: auto;
     filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.65));
     animation: cc-float 5s ease-in-out infinite;
 }
@@ -353,4 +354,44 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto Mono', monospace;
     font-size: .75rem;
     color: var(--cc-ink);
+}
+
+/* ---------- Utilidades Semánticas (Migración de Estilos en Línea / CSP) ---------- */
+.cc-lead-narrow {
+    max-width: 620px;
+}
+
+.cc-container-narrow {
+    max-width: 760px;
+}
+
+.cc-cta-box {
+    border-radius: 24px;
+}
+
+.cc-cta-text {
+    max-width: 600px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.mascot-hero-sm {
+    max-width: 260px;
+}
+
+.avatar-ring-lg {
+    width: 160px;
+    height: 160px;
+    border-width: 4px;
+}
+
+.cc-card-surface {
+    background: var(--cc-surface);
+}
+
+.cc-legal-note {
+    font-size: 0.8rem;
+}
+
+.campo-trampa {
+    display: none !important;
 }

@@ -1,5 +1,6 @@
 # Visual Studio / IDE
 .vs/
+.vscode/
 bin/
 obj/
 *.user
@@ -10,3 +11,16 @@ PLAN_DE_ACCION.*
 *.plan
 privado/
 *.log
+
+# Secretos, configuración local y certificados
+local.settings.json
+.env
+.env.*
+*.pfx
+*.key
+*.pem
+
+# Sistema operativo y dependencias locales
+.DS_Store
+Thumbs.db
+node_modules/

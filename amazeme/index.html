@@ -1,14 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-       <script async src="https://www.googletagmanager.com/gtag/js?id=G-STCZ4CX0Q0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-STCZ4CX0Q0');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-STCZ4CX0Q0"></script>
+    <script src="/js/analytics.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AmazeMe: selección guiada de regalos | Chip&amp;Chapa</title>
@@ -25,10 +19,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/site.css">
 </head>
 <body>
+    <a href="#contenido" class="visually-hidden-focusable">Saltar al contenido</a>
 
     <nav class="navbar navbar-expand-lg navbar-dark cc-nav sticky-top shadow-sm">
         <div class="container">
@@ -66,13 +61,13 @@
                     </div>
                 </div>
                 <div class="col-lg-4 text-center d-none d-lg-block position-relative">
-                    <img src="/Imagenes/Mascotas/mascota-negra.png" alt="Mascota de Chip&amp;Chapa" class="mascot-hero" width="260" height="260" style="max-width:260px;">
+                    <img src="/Imagenes/Mascotas/mascota-negra.png" alt="Mascota de Chip&amp;Chapa" class="mascot-hero mascot-hero-sm" width="260" height="260">
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="cc-section">
+    <main id="contenido" class="cc-section">
         <div class="container">
 
             <section class="row align-items-center gy-4 mb-5 pb-lg-3">
@@ -80,10 +75,10 @@
                     <div class="eyebrow mb-2">El concepto</div>
                     <h2 class="display-6 fw-bold mb-3">Eliminando la fricción al elegir regalos</h2>
                     <p class="text-muted">AmazeMe transforma la incertidumbre del comprador en una experiencia ágil: en lugar de navegar cientos de categorías, la plataforma lo guía con preguntas simples hasta la recomendación adecuada.</p>
-                    <div class="cc-card p-3"><div class="d-flex align-items-center gap-3"><div class="cc-icon"><i class="bi bi-gift-fill"></i></div><div><h6 class="fw-bold mb-0">Comercio inteligente</h6><small class="text-muted">Beneficia al cliente con descuentos y al negocio con compras recurrentes.</small></div></div></div>
+                    <div class="cc-card p-3"><div class="d-flex align-items-center gap-3"><div class="cc-icon"><i class="bi bi-gift-fill"></i></div><div><h3 class="h6 fs-6 fw-bold mb-0">Comercio inteligente</h3><small class="text-muted">Beneficia al cliente con descuentos y al negocio con compras recurrentes.</small></div></div></div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="cc-card shot"><img src="/Imagenes/AmazeMe/Inicio-1.png" alt="Inicio de AmazeMe" loading="lazy" onerror="this.style.display='none'"></div>
+                    <div class="cc-card shot"><img src="/Imagenes/AmazeMe/Inicio-1.png" alt="Inicio de AmazeMe" width="1883" height="940" loading="lazy"></div>
                 </div>
             </section>
             <hr class="my-5 border-secondary-subtle">
@@ -96,7 +91,7 @@
                     <ul class="list-unstyled small text-muted mb-0"><li class="mb-2"><i class="bi bi-check-circle-fill text-cc-blue me-2"></i>Avance dinámico, sin recargas de página.</li><li class="mb-2"><i class="bi bi-check-circle-fill text-cc-blue me-2"></i>Selección clara entre familiares, amigos y compañeros.</li><li class="mb-2"><i class="bi bi-check-circle-fill text-cc-blue me-2"></i>Captura controlada de datos para el algoritmo de sugerencias.</li></ul>
                 </div>
                 <div class="col-lg-6">
-                    <div class="cc-card shot"><img src="/Imagenes/AmazeMe/Encuesta.png" alt="Cuestionario paso a paso" loading="lazy" onerror="this.style.display='none'"></div>
+                    <div class="cc-card shot"><img src="/Imagenes/AmazeMe/Encuesta.png" alt="Cuestionario paso a paso" width="646" height="289" loading="lazy"></div>
                 </div>
             </section>
             <hr class="my-5 border-secondary-subtle">
@@ -106,10 +101,10 @@
                     <div class="eyebrow mb-2">Seguridad y datos</div>
                     <h2 class="display-6 fw-bold mb-3">Autenticación y manejo de errores</h2>
                     <p class="text-muted">El registro y el inicio de sesión incluyen validación de campos y cifrado de contraseñas con BCrypt.</p>
-                    <div class="row g-3 mt-1"><div class="col-sm-6"><div class="cc-card p-3 h-100"><div class="cc-icon mb-2"><i class="bi bi-lock"></i></div><h6 class="fw-bold mb-1">Contraseñas</h6><p class="small text-muted mb-0">Protección criptográfica antes de llegar a la base de datos.</p></div></div><div class="col-sm-6"><div class="cc-card p-3 h-100"><div class="cc-icon mb-2"><i class="bi bi-exclamation-octagon"></i></div><h6 class="fw-bold mb-1">Retroalimentación</h6><p class="small text-muted mb-0">Mensajes de error visuales que guían al usuario.</p></div></div></div>
+                    <div class="row g-3 mt-1"><div class="col-sm-6"><div class="cc-card p-3 h-100"><div class="cc-icon mb-2"><i class="bi bi-lock"></i></div><h3 class="h6 fs-6 fw-bold mb-1">Contraseñas</h3><p class="small text-muted mb-0">Protección criptográfica antes de llegar a la base de datos.</p></div></div><div class="col-sm-6"><div class="cc-card p-3 h-100"><div class="cc-icon mb-2"><i class="bi bi-exclamation-octagon"></i></div><h3 class="h6 fs-6 fw-bold mb-1">Retroalimentación</h3><p class="small text-muted mb-0">Mensajes de error visuales que guían al usuario.</p></div></div></div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="cc-card shot"><img src="/Imagenes/AmazeMe/InicioSesionError.png" alt="Módulo de acceso seguro" loading="lazy" onerror="this.style.display='none'"></div>
+                    <div class="cc-card shot"><img src="/Imagenes/AmazeMe/InicioSesionError.png" alt="Módulo de acceso seguro" width="1325" height="855" loading="lazy"></div>
                 </div>
             </section>
             <hr class="my-5 border-secondary-subtle">
@@ -119,17 +114,17 @@
                     <div class="eyebrow mb-2">Retención</div>
                     <h2 class="display-6 fw-bold mb-3">Amazings: la moneda de recompensa</h2>
                     <p class="text-muted">Un módulo de balance registra en la base de datos los puntos ganados y gastados en cada transacción, incentivando compras futuras y el valor de vida del cliente.</p>
-                    <div class="cc-card p-3"><div class="d-flex align-items-center gap-3"><div class="cc-icon"><i class="bi bi-coin"></i></div><div><h6 class="fw-bold mb-0">Sistema de lealtad integrado</h6><small class="text-muted">Conversión de puntos en descuentos listos para usar.</small></div></div></div>
+                    <div class="cc-card p-3"><div class="d-flex align-items-center gap-3"><div class="cc-icon"><i class="bi bi-coin"></i></div><div><h3 class="h6 fs-6 fw-bold mb-0">Sistema de lealtad integrado</h3><small class="text-muted">Conversión de puntos en descuentos listos para usar.</small></div></div></div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="cc-card shot"><img src="/Imagenes/AmazeMe/Inicio.png" alt="Sección de recompensas" loading="lazy" onerror="this.style.display='none'"></div>
+                    <div class="cc-card shot"><img src="/Imagenes/AmazeMe/Inicio.png" alt="Sección de recompensas" width="1882" height="905" loading="lazy"></div>
                 </div>
             </section>
 
-            <section class="bg-cc-dark text-white p-5 text-center mt-5 shadow-lg position-relative overflow-hidden" style="border-radius:24px;">
+            <section class="bg-cc-dark text-white p-5 text-center mt-5 shadow-lg position-relative overflow-hidden cc-cta-box">
                 <img src="/Imagenes/Mascotas/mascota-blanca.png" alt="" width="90" height="90" class="mb-3">
-                <h3 class="fw-bold mb-3">¿Quieres una plataforma a la medida para tu negocio?</h3>
-                <p class="mx-auto mb-4" style="max-width:600px;color:rgba(255,255,255,.75);">Construimos soluciones digitales completas que combinan diseño limpio y funcionalidad sólida.</p>
+                <h2 class="h3 fs-3 fw-bold mb-3">¿Quieres una plataforma a la medida para tu negocio?</h2>
+                <p class="mx-auto mb-4 cc-cta-text">Construimos soluciones digitales completas que combinan diseño limpio y funcionalidad sólida.</p>
                 <a href="/#contacto" data-section="contacto" class="btn btn-cc btn-lg px-5 fw-bold">Solicitar cotización</a>
             </section>
 
@@ -144,7 +139,7 @@
             </div>
             <div class="d-flex gap-3 fs-5">
                 <a href="https://wa.me/526633629837" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-                <a href="/#contacto" data-section="contacto" aria-label="Correo"><i class="bi bi-envelope"></i></a>
+                <a href="/#contacto" data-section="contacto" aria-label="Ir al formulario de contacto"><i class="bi bi-envelope"></i></a>
             </div>
         </div>
     </footer>
