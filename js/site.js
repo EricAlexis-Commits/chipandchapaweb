@@ -13,7 +13,7 @@
         var el = document.getElementById(id);
         if (!el) return false;
         el.scrollIntoView({ behavior: animado ? "smooth" : "auto" });
-        history.replaceState(null, "", id === "inicio" ? "/" : "/" + id);
+        history.replaceState(null, "", id === "inicio" ? "/" : "/#" + id);
         return true;
     }
 
