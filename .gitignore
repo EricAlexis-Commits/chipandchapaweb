@@ -1,4 +1,12 @@
+# Visual Studio / IDE
 .vs/
 bin/
 obj/
 *.user
+
+# Archivos internos y privados (no publicar en GitHub)
+PLAN_DE_ACCION.*
+*.mp
+*.plan
+privado/
+*.log
