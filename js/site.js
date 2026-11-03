@@ -1,6 +1,21 @@
-/* Chip&Chapa - comportamiento común: scroll suave, URL limpia y menú */
+/* Chip&Chapa - comportamiento común: scroll suave, URL limpia, menú y respaldo de imágenes */
 (function () {
     var KEY = "chipScroll";
+
+    function ocultarImagenFallida(img) {
+        if (!img || img.dataset.ccFallbackApplied) return;
+        img.dataset.ccFallbackApplied = "1";
+        img.style.display = "none";
+        console.warn("Imagen no disponible ocultada:", img.currentSrc || img.src);
+    }
+
+    // Manejador global en fase de captura para errores de carga de imágenes (compatible con CSP)
+    document.addEventListener("error", function (e) {
+        var target = e.target;
+        if (target && target.tagName === "IMG") {
+            ocultarImagenFallida(target);
+        }
+    }, true);
 
     function cerrarMenu() {
         var menu = document.getElementById("navMenu");
@@ -32,6 +47,14 @@
 
     // Al cargar el index: ir a la sección guardada por otra página o por el 404
     window.addEventListener("DOMContentLoaded", function () {
+        // Revisar imágenes que hayan fallado antes de registrar el listener
+        var imgs = document.querySelectorAll("img");
+        imgs.forEach(function (img) {
+            if (img.complete && img.naturalWidth === 0) {
+                ocultarImagenFallida(img);
+            }
+        });
+
         var guardada = null;
         try { guardada = sessionStorage.getItem(KEY); sessionStorage.removeItem(KEY); } catch (err) { }
         if (guardada) setTimeout(function () { irA(guardada, true); }, 120);
