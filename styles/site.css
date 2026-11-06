@@ -1,4 +1,4 @@
-/* ==========================================================
+﻿/* ==========================================================
    Chip&Chapa - Sistema de Diseño Global (Estilo Google)
    ========================================================== */
 
@@ -394,4 +394,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .campo-trampa {
     display: none !important;
+}
+
+/* ---------- Estados y Notificaciones de Pago ---------- */
+.status-icon-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.status-icon-box.status-success {
+    background-color: #e6f4ea;
+    color: #137333;
+    border: 2px solid #ceead6;
+}
+
+.status-icon-box.status-error {
+    background-color: #fce8e6;
+    color: #c5221f;
+    border: 2px solid #fad2cf;
 }
