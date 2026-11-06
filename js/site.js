@@ -1,4 +1,4 @@
-/* Chip&Chapa - comportamiento común: scroll suave, URL limpia, menú y respaldo de imágenes */
+/* Chip&Chapa - comportamiento común: scroll suave, URL limpia, menú responsive y respaldo de imágenes */
 (function () {
     var KEY = "chipScroll";
 
@@ -17,10 +17,38 @@
         }
     }, true);
 
+    function alternarMenu() {
+        var menu = document.getElementById("navMenu");
+        var toggler = document.querySelector(".navbar-toggler");
+        if (!menu) return;
+
+        if (window.bootstrap && window.bootstrap.Collapse) {
+            var bsCollapse = bootstrap.Collapse.getOrCreateInstance(menu);
+            bsCollapse.toggle();
+        } else {
+            var abierto = menu.classList.toggle("show");
+            if (toggler) {
+                toggler.setAttribute("aria-expanded", abierto ? "true" : "false");
+                toggler.classList.toggle("collapsed", !abierto);
+            }
+        }
+    }
+
     function cerrarMenu() {
         var menu = document.getElementById("navMenu");
-        if (menu && menu.classList.contains("show") && window.bootstrap) {
-            bootstrap.Collapse.getOrCreateInstance(menu).hide();
+        var toggler = document.querySelector(".navbar-toggler");
+        if (!menu) return;
+
+        if (menu.classList.contains("show")) {
+            if (window.bootstrap && window.bootstrap.Collapse) {
+                bootstrap.Collapse.getOrCreateInstance(menu).hide();
+            } else {
+                menu.classList.remove("show");
+            }
+            if (toggler) {
+                toggler.setAttribute("aria-expanded", "false");
+                toggler.classList.add("collapsed");
+            }
         }
     }
 
@@ -45,8 +73,27 @@
         }
     });
 
-    // Al cargar el index: ir a la sección guardada por otra página o por el 404
+    // Al cargar el DOM
     window.addEventListener("DOMContentLoaded", function () {
+        // Soporte robusto para el botón de menú móvil (fallback directo si Bootstrap JS tarda o es bloqueado por CSP)
+        var toggler = document.querySelector(".navbar-toggler");
+        if (toggler) {
+            toggler.addEventListener("click", function (e) {
+                if (!window.bootstrap || !window.bootstrap.Collapse) {
+                    e.preventDefault();
+                    alternarMenu();
+                }
+            });
+        }
+
+        // Cerrar menú al hacer clic fuera del navbar en pantallas táctiles y móviles
+        document.addEventListener("click", function (e) {
+            var nav = document.querySelector(".cc-nav");
+            if (nav && !nav.contains(e.target)) {
+                cerrarMenu();
+            }
+        });
+
         // Revisar imágenes que hayan fallado antes de registrar el listener
         var imgs = document.querySelectorAll("img");
         imgs.forEach(function (img) {

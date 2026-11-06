@@ -1,4 +1,4 @@
-﻿/* ==========================================================
+/* ==========================================================
    Chip&Chapa - Sistema de Diseño Global (Estilo Google)
    ========================================================== */
 
@@ -86,6 +86,20 @@ h1, h2, h3, h4, h5, h6 {
     gap: .6rem;
 }
 
+.cc-nav .navbar-toggler {
+    padding: .5rem .75rem;
+    color: rgba(255, 255, 255, 0.85);
+    border-radius: var(--cc-radius-pill);
+    transition: background-color .2s ease;
+}
+
+.cc-nav .navbar-toggler:focus,
+.cc-nav .navbar-toggler:hover {
+    outline: none;
+    box-shadow: none;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
 .cc-nav .nav-link {
     color: rgba(255, 255, 255, 0.8);
     font-weight: 500;
@@ -103,6 +117,32 @@ h1, h2, h3, h4, h5, h6 {
 .cc-nav .nav-link.active {
     color: #ffffff;
     background: rgba(26, 115, 232, 0.45);
+}
+
+@media (max-width: 991.98px) {
+    .cc-nav .navbar-collapse {
+        background: var(--cc-black);
+        padding-top: 1rem;
+        padding-bottom: .75rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        margin-top: .75rem;
+    }
+
+    .cc-nav .navbar-nav {
+        gap: .35rem;
+    }
+
+    .cc-nav .nav-link {
+        padding: .65rem 1rem;
+        font-size: 1rem;
+    }
+
+    .cc-nav .navbar-nav .btn-cc {
+        margin-top: .6rem;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
 }
 
 /* ---------- Botones Estilo Google Material ---------- */
