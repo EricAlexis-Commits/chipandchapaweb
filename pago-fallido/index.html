@@ -17,34 +17,21 @@
     <link rel="stylesheet" href="/styles/site.css">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
-<body>
+<body class="py-4 py-md-5">
     <a href="#contenido" class="visually-hidden-focusable">Saltar al contenido</a>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark cc-nav sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="/" data-section="inicio">
-                <img src="/Imagenes/Mascotas/mascota-blanca.png" alt="Chip&amp;Chapa" width="36" height="36" class="rounded">
-                <span>Chip<span class="text-cc-blue">&amp;</span>Chapa</span>
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
-                    <li class="nav-item"><a class="nav-link" href="/" data-section="inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/#servicios" data-section="servicios">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/#proyectos" data-section="proyectos">Proyectos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/#metodo" data-section="metodo">Cómo trabajamos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/#equipo" data-section="equipo">Equipo</a></li>
-                    <li class="nav-item ms-lg-3"><a class="btn btn-cc" href="/#contacto" data-section="contacto">Cotizar proyecto</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <main id="contenido" class="cc-section">
+    <main id="contenido">
         <div class="container cc-container-narrow">
-            <div class="cc-card p-4 p-md-5 text-center mb-4">
+            <!-- LOGOTIPO MINIMALISTA (SIN MENÚ NI NAVBAR) -->
+            <div class="text-center mb-4">
+                <a href="/" class="d-inline-flex align-items-center gap-2 text-decoration-none" title="Volver al inicio de Chip&amp;Chapa">
+                    <img src="/Imagenes/Mascotas/mascota-blanca.png" alt="Chip&amp;Chapa" width="44" height="44" class="rounded bg-black p-1">
+                    <span class="fs-4 fw-bold text-dark">Chip<span class="text-cc-blue">&amp;</span>Chapa</span>
+                </a>
+            </div>
+
+            <!-- TARJETA PRINCIPAL DE ESTADO -->
+            <div class="cc-card p-4 p-md-5 text-center mb-4 shadow-sm">
                 <div class="status-icon-box status-error" aria-hidden="true">
                     <i class="bi bi-x-circle-fill"></i>
                 </div>
@@ -52,6 +39,8 @@
                 <p class="lead text-muted mb-4">
                     Ocurrió un inconveniente durante la transacción. No te preocupes: ningún cargo no autorizado se aplicará a tu cuenta.
                 </p>
+
+                <!-- ENLACE A PREGUNTAS (PÁGINA EN DESARROLLO) -->
                 <div class="p-3 bg-light rounded-4 border mb-4">
                     <p class="small text-muted mb-1">
                         ¿Tu tarjeta fue rechazada o tienes dudas sobre los motivos comunes de error?
@@ -60,40 +49,21 @@
                         Revisa los motivos frecuentes y soluciones para pagos fallidos <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
+
+                <!-- ACCIONES PRINCIPALES -->
                 <div class="d-flex flex-wrap gap-3 justify-content-center">
-                    <a href="/" data-section="inicio" class="btn btn-cc px-4 py-2">
+                    <a href="/" class="btn btn-cc px-4 py-2">
                         <i class="bi bi-house-door-fill me-1"></i> Volver al menú
                     </a>
-                    <button class="btn btn-cc-outline px-4 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#seccionQuejas" aria-expanded="false" aria-controls="seccionQuejas">
+                    <button id="btnToggleQuejas" class="btn btn-cc-outline px-4 py-2" type="button" aria-expanded="false" aria-controls="seccionQuejas">
                         <i class="bi bi-chat-square-dots me-1"></i> Reportar duda o queja
                     </button>
                 </div>
             </div>
-            <div class="cc-card p-4 mb-4">
-                <h2 class="h5 fw-bold mb-3 text-center">Nuestros medios de contacto directo</h2>
-                <div class="row g-3">
-                    <div class="col-sm-6">
-                        <a href="https://wa.me/526633629837" target="_blank" rel="noopener noreferrer" class="btn btn-cc-light text-dark border w-100 p-3 text-start d-flex align-items-center gap-3">
-                            <i class="bi bi-whatsapp text-success fs-3"></i>
-                            <div>
-                                <span class="d-block fw-bold small text-dark">WhatsApp Directo</span>
-                                <span class="small text-muted">+52 663 362 9837</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-sm-6">
-                        <a href="mailto:chipandchapaoficial@gmail.com" class="btn btn-cc-light text-dark border w-100 p-3 text-start d-flex align-items-center gap-3">
-                            <i class="bi bi-envelope-fill text-cc-blue fs-3"></i>
-                            <div>
-                                <span class="d-block fw-bold small text-dark">Correo Electrónico</span>
-                                <span class="small text-muted">chipandchapaoficial@gmail.com</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="collapse" id="seccionQuejas">
-                <div class="cc-card p-4 p-md-5">
+
+            <!-- FORMULARIO DE QUEJAS (DESPLEGABLE DIRECTO) -->
+            <div id="seccionQuejas" class="d-none mb-4">
+                <div class="cc-card p-4 p-md-5 shadow-sm">
                     <div class="text-center mb-4">
                         <span class="cc-chip mb-2">Soporte y aclaraciones</span>
                         <h2 class="h4 fw-bold">Buzón de dudas y quejas</h2>
@@ -145,25 +115,41 @@
                     </form>
                 </div>
             </div>
+
+            <!-- CONTACTOS DIRECTOS -->
+            <div class="cc-card p-4 mb-4 shadow-sm">
+                <h2 class="h5 fw-bold mb-3 text-center">Nuestros medios de contacto directo</h2>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <a href="https://wa.me/526633629837" target="_blank" rel="noopener noreferrer" class="btn btn-cc-light text-dark border w-100 p-3 text-start d-flex align-items-center gap-3">
+                            <i class="bi bi-whatsapp text-success fs-3"></i>
+                            <div>
+                                <span class="d-block fw-bold small text-dark">WhatsApp Directo</span>
+                                <span class="small text-muted">+52 663 362 9837</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="mailto:chipandchapaoficial@gmail.com" class="btn btn-cc-light text-dark border w-100 p-3 text-start d-flex align-items-center gap-3">
+                            <i class="bi bi-envelope-fill text-cc-blue fs-3"></i>
+                            <div>
+                                <span class="d-block fw-bold small text-dark">Correo Electrónico</span>
+                                <span class="small text-muted">chipandchapaoficial@gmail.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PIE DISCRETO (SIN BARRA COMPLETA NI REDES) -->
+            <div class="text-center text-muted small py-3">
+                <span>&copy; 2026 Chip&amp;Chapa. Todos los derechos reservados.</span>
+            </div>
         </div>
     </main>
-    <footer class="cc-footer py-4">
-        <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
-            <div class="d-flex align-items-center gap-3 small">
-                <img src="/Imagenes/Mascotas/mascota-blanca.png" alt="" width="40" height="40">
-                <span>&copy; 2026 <strong class="text-white">Chip&amp;Chapa</strong>. Todos los derechos reservados.</span>
-            </div>
-            <div class="d-flex gap-3 fs-5">
-                <a href="https://wa.me/526633629837" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-                <a href="/#contacto" data-section="contacto" aria-label="Ir al formulario de contacto"><i class="bi bi-envelope"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <a class="wa-float" href="https://wa.me/526633629837" target="_blank" rel="noopener noreferrer" aria-label="Escríbenos por WhatsApp"><i class="bi bi-whatsapp"></i></a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="/js/site.js"></script>
+    <script src="/js/pago-estado.js" defer></script>
+    <script src="/js/site.js" defer></script>
 </body>
 </html>
-
