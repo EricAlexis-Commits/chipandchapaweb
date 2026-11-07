@@ -132,3 +132,29 @@
         });
     });
 })();
+
+//Abrir modals de Términos y Condiciones y Avisos de Privacidad
+let terminosCondicionesAbrir = document.getElementById('abrirTerminos');
+let avisosPrivacidadAbrir = document.getElementById('abrirAvisos');
+
+let modalTerminos = document.getElementById('modalAbrir-1');
+let modalAvisos = document.getElementById('modalAbrir-2');
+
+let cerrarTerminos = document.getElementById('cerrarModal-1');
+let cerrarPrivacidad = document.getElementById('cerrarModal-2');
+
+terminosCondicionesAbrir.addEventListener('click',(e)=>{
+    e.preventDefault();
+    modalTerminos.showModal();
+});
+avisosPrivacidadAbrir.addEventListener('click',(e)=>{
+    e.preventDefault();
+    modalAvisos.showModal();
+});
+
+cerrarTerminos.addEventListener('click',()=>{
+    modalTerminos.close();
+});
+cerrarPrivacidad.addEventListener('click',()=>{
+    modalAvisos.close();
+});

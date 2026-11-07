@@ -494,3 +494,92 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     padding: 0.45rem 1.1rem;
 }
+
+/*dialog:open{
+    width: fit-content;
+    max-width: 750px;
+    background-color: #000000;
+    height: 90%;
+    scrollbar-width: thin;
+
+}
+h3,h4{
+    
+}
+dialog>p{
+    color: white;
+}
+dialog>ol>li{
+    color: white;
+}*/
+/* 1. Estado base del modal (cuando está cerrado o abriéndose) */
+dialog {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px); /* Empieza ligeramente abajo y más pequeño */
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), overlay 0.3s ease allow-discrete, display 0.3s ease allow-discrete;
+    scrollbar-width: thin;
+    background-color: #000000;
+}
+
+/* 2. Estado cuando el modal está abierto (.showModal()) */
+dialog[open] {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* 3. Animación de entrada inicial (Soporte moderno para elementos pop-up/dialog) */
+@starting-style {
+    dialog[open] {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+}
+
+/* 4. Animación del fondo oscuro (Backdrop) */
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, display 0.3s ease allow-discrete;
+}
+
+dialog[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0.75); /* Oscurece la pantalla de fondo */
+    backdrop-filter: blur(4px);             /* Efecto borroso elegante estilo "Glassmorphism" */
+}
+
+@starting-style {
+    dialog[open]::backdrop {
+        background-color: rgba(0, 0, 0, 0);
+        backdrop-filter: blur(0px);
+    }
+}
+.modalBoton{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.modalBoton button{
+    
+    padding: 1rem;
+    position: sticky;
+    background: var(--cc-blue);
+    color: white;
+    border-style: none;
+    transition: box-shadow 2s ease-in-out;
+    border-radius: 2rem;
+}
+.modalBoton button:hover{
+    background: var(--cc-blue-hover);
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);;
+}
+dialog h3{
+    color: black;
+    text-align: center;
+}
+dialog h4{
+    text-align: center;
+    color: black;
+}
+dialog > ol > li, dialog > ol > li, dialog > p, dialog > ul > li{
+    color: white;
+}
