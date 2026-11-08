@@ -102,6 +102,14 @@
             }
         });
 
+        // Inicializar bloques de Google AdSense externamente (permite CSP sin 'unsafe-inline' en script-src)
+        var bloquesAnuncios = document.querySelectorAll("ins.adsbygoogle");
+        bloquesAnuncios.forEach(function () {
+            try {
+                (window.adsbygoogle = window.adsbygoogle || []).push({});
+            } catch (err) { }
+        });
+
         var guardada = null;
         try { guardada = sessionStorage.getItem(KEY); sessionStorage.removeItem(KEY); } catch (err) { }
         if (guardada) setTimeout(function () { irA(guardada, true); }, 120);
