@@ -106,12 +106,11 @@
         try { guardada = sessionStorage.getItem(KEY); sessionStorage.removeItem(KEY); } catch (err) { }
         if (guardada) setTimeout(function () { irA(guardada, true); }, 120);
 
-        // /equipo/#software o #hardware: baja a la sección y deja la URL limpia (/equipo/)
+        // Soporte de navegación por hash / ancla (#punto-de-venta, #software, #hardware, etc.)
         var h = (location.hash || "").replace("#", "");
-        if (h && (h === "software" || h === "hardware") && document.getElementById(h)) {
+        if (h && document.getElementById(h)) {
             setTimeout(function () {
                 document.getElementById(h).scrollIntoView({ behavior: "smooth" });
-                history.replaceState(null, "", location.pathname);
             }, 120);
         }
 
