@@ -106,11 +106,12 @@
         try { guardada = sessionStorage.getItem(KEY); sessionStorage.removeItem(KEY); } catch (err) { }
         if (guardada) setTimeout(function () { irA(guardada, true); }, 120);
 
-        // Soporte de navegación por hash / ancla (#punto-de-venta, #software, #hardware, etc.)
+        // /equipo/#software o #hardware: baja a la sección y deja la URL limpia (/equipo/)
         var h = (location.hash || "").replace("#", "");
-        if (h && document.getElementById(h)) {
+        if (h && (h === "software" || h === "hardware") && document.getElementById(h)) {
             setTimeout(function () {
                 document.getElementById(h).scrollIntoView({ behavior: "smooth" });
+                history.replaceState(null, "", location.pathname);
             }, 120);
         }
 
@@ -131,29 +132,3 @@
         });
     });
 })();
-
-//Abrir modals de Términos y Condiciones y Avisos de Privacidad
-let terminosCondicionesAbrir = document.getElementById('abrirTerminos');
-let avisosPrivacidadAbrir = document.getElementById('abrirAvisos');
-
-let modalTerminos = document.getElementById('modalAbrir-1');
-let modalAvisos = document.getElementById('modalAbrir-2');
-
-let cerrarTerminos = document.getElementById('cerrarModal-1');
-let cerrarPrivacidad = document.getElementById('cerrarModal-2');
-
-terminosCondicionesAbrir.addEventListener('click',(e)=>{
-    e.preventDefault();
-    modalTerminos.showModal();
-});
-avisosPrivacidadAbrir.addEventListener('click',(e)=>{
-    e.preventDefault();
-    modalAvisos.showModal();
-});
-
-cerrarTerminos.addEventListener('click',()=>{
-    modalTerminos.close();
-});
-cerrarPrivacidad.addEventListener('click',()=>{
-    modalAvisos.close();
-});
