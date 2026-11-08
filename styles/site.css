@@ -583,3 +583,39 @@ dialog h4{
 dialog > ol > li, dialog > ol > li, dialog > p, dialog > ul > li{
     color: white;
 }
+
+/* ---------- Espacios Publicitarios No Invasivos (Google AdSense) ---------- */
+.cc-ad-section {
+    padding: 1.5rem 0;
+}
+
+.cc-ad-container {
+    background: var(--cc-surface);
+    border: 1px solid var(--cc-border);
+    border-radius: var(--cc-radius);
+    padding: 0.75rem 1rem;
+    text-align: center;
+    overflow: hidden;
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+.cc-ad-label {
+    display: block;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cc-muted);
+    margin-bottom: 0.35rem;
+    user-select: none;
+}
+
+.adsbygoogle {
+    display: block;
+}
+
+ins.adsbygoogle[data-ad-status="unfilled"],
+.cc-ad-section:has(ins.adsbygoogle[data-ad-status="unfilled"]),
+.cc-ad-container:has(ins.adsbygoogle[data-ad-status="unfilled"]) {
+    display: none !important;
+}
