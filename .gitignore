@@ -24,3 +24,6 @@ local.settings.json
 .DS_Store
 Thumbs.db
 node_modules/
+
+# Instaladores pesados alojados en Cloudflare R2
+software/*.exe

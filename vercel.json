@@ -21,6 +21,16 @@
       "source": "/contacto",
       "destination": "/#contacto",
       "permanent": true
+    },
+    {
+      "source": "/software/Chip&Chapa_POS.exe",
+      "destination": "https://descargas.chipandchapa.com/Chip&Chapa_Instalador.exe",
+      "permanent": false
+    },
+    {
+      "source": "/software/Chip&ChapaPOS-Instalador.exe",
+      "destination": "https://descargas.chipandchapa.com/Chip&Chapa_Instalador.exe",
+      "permanent": false
     }
   ],
   "headers": [
