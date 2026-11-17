@@ -2,23 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://chipandchapa.com/</loc>
-        <lastmod>2026-11-13</lastmod>
+        <lastmod>2026-11-17</lastmod>
     </url>
     <url>
         <loc>https://chipandchapa.com/equipo/</loc>
         <lastmod>2026-11-12</lastmod>
     </url>
     <url>
-        <loc>https://chipandchapa.com/amazeme/</loc>
-        <lastmod>2026-11-12</lastmod>
-    </url>
-    <url>
-        <loc>https://chipandchapa.com/clinica/</loc>
-        <lastmod>2026-11-12</lastmod>
+        <loc>https://chipandchapa.com/desarrollo-web/</loc>
+        <lastmod>2026-11-17</lastmod>
     </url>
     <url>
         <loc>https://chipandchapa.com/miscelanea/</loc>
-        <lastmod>2026-11-12</lastmod>
+        <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+        <loc>https://chipandchapa.com/guias/</loc>
+        <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+        <loc>https://chipandchapa.com/guias/como-hacer-corte-de-caja-sin-errores/</loc>
+        <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+        <loc>https://chipandchapa.com/guias/control-de-inventario-tienda-abarrotes/</loc>
+        <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+        <loc>https://chipandchapa.com/guias/elegir-impresora-tickets-y-lector-codigo-barras/</loc>
+        <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+        <loc>https://chipandchapa.com/guias/sistema-de-fiado-y-cobranza-sin-perder-dinero/</loc>
+        <lastmod>2026-11-17</lastmod>
+    </url>
+    <url>
+        <loc>https://chipandchapa.com/guias/guia-completa-miscelanea-pos-chipandchapa/</loc>
+        <lastmod>2026-11-17</lastmod>
     </url>
     <url>
         <loc>https://chipandchapa.com/preguntas-frecuentes/</loc>

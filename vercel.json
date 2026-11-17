@@ -23,6 +23,16 @@
       "permanent": true
     },
     {
+      "source": "/clinica",
+      "destination": "/desarrollo-web/",
+      "permanent": true
+    },
+    {
+      "source": "/clinica/",
+      "destination": "/desarrollo-web/",
+      "permanent": true
+    },
+    {
       "source": "/software/Chip&Chapa_POS.exe",
       "destination": "https://descargas.chipandchapa.com/ChipandChapa_Instalador.exe",
       "permanent": false
