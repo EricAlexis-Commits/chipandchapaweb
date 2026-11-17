@@ -75,6 +75,10 @@
 
     // Al cargar el DOM
     window.addEventListener("DOMContentLoaded", function () {
+        // Activar hojas de estilo diferidas (evita bloqueo de renderizado sin 'unsafe-inline')
+        document.querySelectorAll("link[data-defer-css]").forEach(function (link) {
+            link.media = "all";
+        });
         // Soporte robusto para el botón de menú móvil (fallback directo si Bootstrap JS tarda o es bloqueado por CSP)
         var toggler = document.querySelector(".navbar-toggler");
         if (toggler) {
